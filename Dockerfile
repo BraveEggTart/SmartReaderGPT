@@ -11,4 +11,4 @@ RUN pip install --progress-bar off --no-cache-dir -r requirements.txt -i https:/
 #设置时区
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80", "--reload", "--lifespan", "on"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80", "--reload", "--lifespan", "on"]
