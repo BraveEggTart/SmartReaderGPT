@@ -70,9 +70,9 @@ async def upload_file(file: UploadFile = File(...)):
     text = "\n".join([paragraph.text for paragraph in doc.paragraphs])
 
     prompt = f"""
-    你的任务是基于以下文档内容生成一个的简短摘要。
+    你的任务是基于以下文档内容生成一个的简短摘要。要求以中文回答。
 
-    请对三个反引号之间的评论文本进行概括，最多30个词汇
+    请对三个反引号之间的评论文本进行概括，最多30个词汇。
     ```{text}```
     """
 
